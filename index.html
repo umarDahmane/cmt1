@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>من الذهن إلى الاستعارة: الأطر المعرفية لنظرية الاستعارة التصورية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF2F5;--card:#fff;--ink:#14283B;--mut:#53677A;--pri:#0E7C86;--pi:#fff;--acc:#E8A817;--ok:#1E8E5A;--bad:#C8414B;--line:#CBD7DF;--soft:#E1F0F2;--warm:#FBF1D6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1B26;--card:#172635;--ink:#E8F0F5;--mut:#9FB2C2;--pri:#38B6C2;--pi:#06222A;--acc:#F5C048;--ok:#4CC38A;--bad:#F0707A;--line:#2C4155;--soft:#1B3342;--warm:#33301C;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1B26;--card:#172635;--ink:#E8F0F5;--mut:#9FB2C2;--pri:#38B6C2;--pi:#06222A;--acc:#F5C048;--ok:#4CC38A;--bad:#F0707A;--line:#2C4155;--soft:#1B3342;--warm:#33301C;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,"Segoe UI",Tahoma,sans-serif;font-size:17px;line-height:1.9}
+.wrap{max-width:760px;margin:0 auto;padding:16px}
+h1{font-size:1.6rem;font-weight:800;line-height:1.5;margin:6px 0}
+h2{font-size:1.3rem;font-weight:800;margin:0 0 6px;line-height:1.6}
+p{margin:8px 0}
+.sub{color:var(--mut);margin:0}
+.en{direction:ltr;unicode-bidi:isolate;display:inline-block;color:var(--mut);font-weight:500}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:10px 0}
+.lvl{display:inline-flex;border:2px solid var(--pri);border-radius:999px;overflow:hidden}
+.lvl button{border:0;background:transparent;color:var(--pri);font:inherit;font-weight:700;padding:6px 16px;min-height:44px;cursor:pointer}
+.lvl button.on{background:var(--pri);color:var(--pi)}
+.prog{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 12px}
+#bar{height:100%;width:0;background:var(--pri);transition:width .4s}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:8px}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:700;border-radius:999px;padding:6px 16px;min-height:44px;cursor:pointer}
+.tab.on{background:var(--pri);color:var(--pi);border-color:var(--pri)}
+button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{border:1px solid var(--pri);background:transparent;color:var(--pri);font:inherit;font-weight:700;border-radius:999px;padding:4px 14px;min-height:44px;cursor:pointer}
+.chip.on{background:var(--pri);color:var(--pi)}
+.btn{border:0;background:var(--pri);color:var(--pi);font:inherit;font-weight:800;border-radius:10px;padding:8px 20px;min-height:46px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+.row{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;margin-top:14px}
+.box{border-radius:10px;padding:10px 14px;margin:10px 0;border-inline-start:5px solid var(--pri);background:var(--soft)}
+.box.an{border-color:var(--acc);background:var(--warm)}
+.box b{display:block}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.kw span{background:var(--soft);border-radius:6px;padding:0 10px;font-size:.92rem}
+.map{display:flex;align-items:stretch;gap:10px;margin:12px 0}
+.dom{flex:1;border-radius:10px;padding:10px;text-align:center;border:2px solid var(--pri)}
+.dom.t{border-color:var(--acc)}
+.dom small{display:block;color:var(--mut)}
+.dom b{font-size:1.25rem}
+.arr{align-self:center;font-size:1.8rem;color:var(--mut)}
+.formula{text-align:center;font-weight:800;font-size:1.2rem}
+.step{display:block;width:calc(100% - var(--i)*20px);margin-inline-start:calc(var(--i)*20px);text-align:start;border:2px solid var(--line);background:var(--card);color:var(--ink);font:inherit;border-radius:10px;padding:8px 14px;margin-bottom:8px;min-height:48px;cursor:pointer}
+.step.on{border-color:var(--pri);background:var(--soft)}
+.step b{display:block}
+.step span{color:var(--mut);font-size:.92rem}
+.opt{display:block;width:100%;text-align:start;border:2px solid var(--line);background:var(--card);color:var(--ink);font:inherit;border-radius:10px;padding:8px 14px;margin:8px 0;min-height:48px;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:var(--soft)}
+.opt.bad{border-color:var(--bad)}
+.fb{padding:10px 14px;border-radius:10px;margin-top:10px}
+.fb.ok{background:var(--soft);border-inline-start:5px solid var(--ok)}
+.fb.bad{background:var(--warm);border-inline-start:5px solid var(--bad)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m{border:2px solid var(--line);background:var(--card);color:var(--ink);font:inherit;border-radius:10px;padding:8px;min-height:56px;cursor:pointer;font-size:.95rem;line-height:1.6}
+.m.sel{border-color:var(--pri);background:var(--soft)}
+.m.done{border-color:var(--ok);opacity:.65}
+.m.no{border-color:var(--bad)}
+.m + .m{margin-top:8px}
+.score{font-size:2.2rem;font-weight:800;text-align:center;color:var(--pri)}
+ul{padding-inline-start:22px;margin:6px 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:480px){body{font-size:16px}.cols{gap:6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>من الذهن إلى الاستعارة</h1>
+  <p class="sub">درس تفاعلي: الأطر المعرفية لنظرية الاستعارة التصورية <span class="en">(CMT)</span></p>
+  <div class="top">
+    <div class="lvl" role="group" aria-label="مستوى الشرح">
+      <button id="l1" class="on" onclick="setLvl(true)">شرح مبسّط</button>
+      <button id="l2" onclick="setLvl(false)">شرح أكاديمي</button>
+    </div>
+  </div>
+  <div class="prog" aria-hidden="true"><div id="bar"></div></div>
+  <nav class="tabs" id="tabs" aria-label="أقسام الدرس"></nav>
+  <main id="main"></main>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const T=['البداية','المفاهيم','الخريطة','طبّق','اختبر'];
+let simple=true,tab=0,seen=new Set([0]),ci=0,ei=-1,si=0,pi=-1;
+
+const EX=[
+{f:'الوقت مال',s:'المال',t:'الوقت',l:['ضيّعتُ وقتي','وفّرتُ وقتًا في الطريق','هذا لا يستحق وقتي','ربحتُ ساعة كاملة']},
+{f:'الجدال حرب',s:'الحرب',t:'الجدال',l:['هاجم حجّتي','دافعتُ عن رأيي','كسبتُ النقاش','أسقطتُ فكرته']},
+{f:'الحياة رحلة',s:'السفر',t:'الحياة',l:['بلغتُ مفترق طرق','لا أعرف إلى أين أمضي','خطوتي الأولى في العمل','طريقي ما زال طويلًا']}
+];
+
+const C=[
+{ar:'الإدراك (المعرفة الذهنية)',en:'Cognition',q:'ماذا يحدث داخل الذهن؟',
+ s:'هو كل ما يفعله ذهنك ليفهم العالم: أن ترى، وتنتبه، وتتذكّر، وتفكّر، وتتكلّم، وتقرّر.',
+ a:'مجموع العمليات الذهنية التي بها يكتسب الكائن المعرفة ويعالجها ويخزّنها ويستعملها: الإدراك الحسي، الانتباه، الذاكرة، التفكير، اللغة، الاستدلال.',
+ an:'مثل نظام التشغيل في هاتفك: لا تراه، لكنه يعمل دائمًا: يستقبل ويخزّن ويقرّر.',
+ ex:'تسمع كلمة «زيتونة» فتتخيّل الشجرة والطعم وذكرى من قريتك. كل هذا إدراك يعمل.',
+ kw:['انتباه','ذاكرة','تفكير','لغة'],
+ rel:'الاستعارة التصورية تقول إن التفكير نفسه يعتمد على الاستعارة، فهي جزء من الإدراك وليست زينة في الكلام.'},
+{ar:'العلوم المعرفية',en:'Cognitive Science',q:'كيف يعمل الذهن؟',
+ s:'علم يجمع تخصصات كثيرة ليجيب عن سؤال واحد: كيف يعمل الذهن؟ كل تخصص يرى جزءًا من الصورة.',
+ a:'حقل بيني التخصصات يدرس الذهن وعملياته، يجمع علم النفس واللسانيات وعلوم الأعصاب والذكاء الاصطناعي والفلسفة والأنثروبولوجيا؛ ظهر مع «الثورة المعرفية» في منتصف القرن العشرين.',
+ an:'مثل فريق طبي: طبيب وصيدلي ومهندس أجهزة يدرسون القلب معًا. هنا يدرس الذهنَ نفسانيٌّ ولغويٌّ وعالم أعصاب وباحث في الذكاء الاصطناعي.',
+ ex:'سؤال «كيف نتذكّر؟» يجيب عنه عالم الأعصاب بالدماغ، وعالم النفس بالتجارب، واللغوي بما نقوله.',
+ kw:['علم النفس','اللسانيات','الأعصاب','الذكاء الاصطناعي','الفلسفة'],
+ rel:'هي الإطار الأكبر: منها خرجت اللسانيات المعرفية التي وُلدت فيها نظرية الاستعارة.'},
+{ar:'اللسانيات المعرفية',en:'Cognitive Linguistics',q:'ماذا تكشف اللغة عن الذهن؟',
+ s:'طريقة لدراسة اللغة ترى أنها ليست نظامًا معزولًا، بل مرآة لطريقة تفكيرنا وتجربتنا بأجسامنا.',
+ a:'مقاربة لسانية ظهرت في السبعينيات والثمانينيات (Lakoff, Langacker, Talmy…) ترفض استقلال اللغة عن بقية القدرات الذهنية، وتجعل المعنى والتصوّر والتجربة الجسدية والاستعمال في صلب الوصف.',
+ an:'اللغة نافذة نطلّ منها على الذهن: ما نقوله يكشف كيف نفكّر.',
+ ex:'نقول «استوعبتُ الدرس» و«امتلأ رأسي بالأفكار»: وكأن الذهن وعاء.',
+ kw:['اللغة مرآة الذهن','التجربة الجسدية','المعنى أولًا'],
+ rel:'هنا تولد النظرية: ما دامت اللغة تعكس التفكير، فالاستعارات في كلامنا تكشف استعارات في تفكيرنا.'},
+{ar:'الدلالة المعرفية',en:'Cognitive Semantics',q:'ما معنى «المعنى»؟',
+ s:'الفرع الذي يدرس المعنى. ويقول إن معنى الكلمة هو الصورة والتجربة التي تبنيها في ذهنك، لا مجرد تعريف في قاموس.',
+ a:'فرع من اللسانيات المعرفية يعالج الدلالة بوصفها تصوّرًا (conceptualization) متجسّدًا في التجربة. من أدواته: التصنيف النموذجي (prototype) والمخططات الصورية (image schemas) والأطر (frames) والاستعارة والكناية.',
+ an:'القاموس يعطيك ورقة تعريف، أما الذهن فيعطيك فيلمًا قصيرًا: كلمة «بيت» تستدعي دفئًا وروائح وأصواتًا.',
+ ex:'كلمة «طائر»: أول ما يخطر لك عصفور لا نعامة. هذا هو «النموذج الأصلي» للفئة.',
+ kw:['مفهوم','نموذج أصلي','مخطط صوري','مجال'],
+ rel:'الاستعارة التصورية هي أشهر نظرية داخل الدلالة المعرفية: تفسّر كيف نفهم فكرة مجرّدة بفكرة محسوسة.'},
+{ar:'نظرية الاستعارة التصورية',en:'Conceptual Metaphor Theory',q:'كيف نفهم الأفكار المجرّدة؟',
+ s:'نفهم فكرة صعبة (مجرّدة) بفكرة سهلة (محسوسة). الاستعارة ليست زينة في الكلام، بل طريقة في التفكير.',
+ a:'نظرية Lakoff & Johnson (1980، Metaphors We Live By): الاستعارة إسقاط (mapping) منتظم من مجال مصدر (source domain) على مجال هدف (target domain)، وهي ظاهرة تصوّرية قبل أن تكون لغوية.',
+ an:'مثل أن تشرح لطفل «الكهرباء» بقولك: هي ماء يجري في أنابيب. فهم الجديد بالمألوف.',
+ ex:'الحياة رحلة: «بلغتُ مفترق طرق»، «خطواتي الأولى في العمل».',
+ kw:['مجال مصدر','مجال هدف','إسقاط'],
+ rel:'هذه هي الوجهة: المفاهيم الأربعة السابقة هي الأرضية التي تقوم عليها.'}
+];
+
+const S=[
+{n:'الإدراك',r:'الظاهرة التي سندرسها',d:'نبدأ بسؤال: ماذا يجري في الذهن حين نفكّر ونتكلّم؟'},
+{n:'العلوم المعرفية',r:'العلم الذي يدرس هذه الظاهرة',d:'تجتمع تخصصات عدة لدراسة الذهن، ومنها اللسانيات.'},
+{n:'اللسانيات المعرفية',r:'ندخل إلى الذهن من باب اللغة',d:'نفترض أن اللغة تعكس التفكير، فنحلّل اللغة لنفهم الذهن.'},
+{n:'الدلالة المعرفية',r:'ونركّز على المعنى',d:'المعنى تصوّر ذهني متجسّد، وفيه تظهر الاستعارة والكناية والنماذج.'},
+{n:'الاستعارة التصورية',r:'ونكتشف كيف تُبنى الأفكار المجرّدة',d:'نفهم المجرّد (الوقت) عبر المحسوس (المال). هذه هي الوجهة.'}
+];
+
+const P=[
+{t:'اللغة مرآة للتفكير',d:'إذا كانت اللغة تعكس الذهن، فطريقة كلامنا تكشف طريقة تفكيرنا. وحين نجد استعارات كثيرة في كلامنا، فلعلها موجودة في تفكيرنا أيضًا. هذا هو أساس النظرية.'},
+{t:'الجسد أصل المعنى',d:'نفهم العالم أولًا بأجسامنا: فوق وتحت، داخل وخارج. لذلك نقول «ارتفعت معنوياتي» و«أنا في الحضيض»: الأحسن «فوق» لأن الجسم السليم منتصب.'},
+{t:'المعنى تصوّر ذهني',d:'الكلمة لا تشير إلى الشيء مباشرة، بل إلى صورة نبنيها عنه. وحين نبني صورة لفكرة مجرّدة (الحب) نستعير صورة محسوسة (نار، رحلة).'}
+];
+
+const M=[['الإدراك','كل عمليات الذهن: انتباه وذاكرة وتفكير'],['العلوم المعرفية','دراسة الذهن بتخصصات متعددة'],['اللسانيات المعرفية','اللغة مرآة للتفكير والتجربة الجسدية'],['الدلالة المعرفية','المعنى تصوّر ذهني مبني على التجربة'],['الاستعارة التصورية','فهم فكرة مجرّدة بفكرة محسوسة']];
+
+const Q=[
+{q:'أي عبارة تصف «العلوم المعرفية» أفضل وصف؟',o:['علم يدرس الذهن بتعاون تخصصات متعددة','علم يدرس قواعد النحو فقط','علم يدرس الأدوية','علم يدرس تاريخ اللغات'],h:'كلمة «متعددة التخصصات» هي المفتاح.',e:'العلوم المعرفية حقل بيني يجمع النفس واللسانيات والأعصاب والذكاء الاصطناعي لفهم الذهن.'},
+{q:'أيٌّ مما يلي من عمليات «الإدراك» (cognition)؟',o:['لون جدار القسم','سعر الكتاب','الذاكرة والانتباه والتفكير','عدد صفحات المقرر'],h:'الإدراك يحدث داخل الذهن.',e:'الإدراك هو عمليات الذهن: الانتباه والذاكرة والتفكير واللغة.'},
+{q:'ما الفكرة المميِّزة للسانيات المعرفية؟',o:['اللغة نظام معزول عن التفكير','اللغة تعكس طريقة تفكيرنا وتجربتنا','اللغة مجرد قواعد صوتية','اللغة لا علاقة لها بالمعنى'],h:'تذكّر: اللغة «مرآة».',e:'اللسانيات المعرفية ترفض عزل اللغة عن الذهن، وترى أنها تعكس التفكير والتجربة.'},
+{q:'في الدلالة المعرفية، معنى الكلمة هو…',o:['تصوّر ذهني مبني على التجربة','تعريف جامد في القاموس فقط','عدد حروفها','أصلها التاريخي فقط'],h:'المعنى «فيلم قصير» في الذهن لا ورقة تعريف.',e:'المعنى تصوّر (conceptualization) متجسّد في تجربتنا.'},
+{q:'في «هاجم حجّتي ودافعتُ عن رأيي» ما المجال المصدر؟',o:['الجدال','الحرب','الطبخ','الرياضة'],h:'المصدر هو الأمر المحسوس المألوف، والهدف هو الفكرة المجرّدة.',e:'الحرب مجال مصدر، والجدال مجال هدف: الجدال حرب.'},
+{q:'ما الجديد الذي جاءت به نظرية الاستعارة التصورية؟',o:['الاستعارة زينة أدبية فقط','الاستعارة خطأ لغوي','الاستعارة طريقة في التفكير تظهر في اللغة','الاستعارة خاصة بالشعراء'],h:'عنوان كتاب Lakoff & Johnson: «استعارات نحيا بها».',e:'الاستعارة ظاهرة تصوّرية يومية تنظّم تفكيرنا، واللغة مجرد مظهرها.'}
+];
+
+const sh=a=>[...a].sort(()=>Math.random()-.5);
+function setLvl(v){simple=v;$('#l1').classList.toggle('on',v);$('#l2').classList.toggle('on',!v);render()}
+function go(i){tab=i;seen.add(i);render();window.scrollTo({top:0,behavior:'smooth'})}
+function nav(p,n){return `<div class="row">${p!=null?`<button class="btn ghost" onclick="go(${p})">السابق</button>`:'<span></span>'}${n!=null?`<button class="btn" onclick="go(${n})">التالي</button>`:''}</div>`}
+
+function v0(){
+ const e=EX[ei];
+ return `<div class="card"><h2>ابدأ بسؤال بسيط</h2>
+ <p>نحن نقول كل يوم: «ضيّعتُ وقتي» و«وفّرتُ وقتًا». هل الوقت مال حقًّا؟ لا، لكننا نتكلّم عنه كأنه مال. لماذا؟ هذا ما سنفهمه في هذا الدرس.</p>
+ <p><b>اختر مثالًا لترى ماذا يحدث في الذهن:</b></p>
+ <div class="chips">${EX.map((x,i)=>`<button class="chip${i==ei?' on':''}" onclick="ei=${i};render()">${x.f}</button>`).join('')}</div>
+ ${e?`<p>عبارات نستعملها:</p><ul>${e.l.map(x=>`<li>«${x}»</li>`).join('')}</ul>
+ <div class="map"><div class="dom"><small>المجال المصدر (المحسوس)</small><b>${e.s}</b></div><div class="arr">←</div><div class="dom t"><small>المجال الهدف (المجرّد)</small><b>${e.t}</b></div></div>
+ <p class="formula">${e.f}</p>
+ <div class="box"><b>ماذا حدث؟</b>فهمنا فكرة مجرّدة (${e.t}) بفكرة نعرفها بالتجربة (${e.s}). هذه هي <b style="display:inline">الاستعارة التصورية</b>.</div>
+ <div class="box an"><b>السؤال الكبير</b>لكي نفهم لماذا يفكّر الذهن هكذا، نحتاج أربعة مفاهيم هي أرضية النظرية. هيا نتعرّف عليها.</div>`:''}
+ ${nav(null,1)}</div>`;
+}
+
+function v1(){
+ const c=C[ci];
+ return `<div class="card"><div class="chips">${C.map((x,i)=>`<button class="chip${i==ci?' on':''}" onclick="ci=${i};render()">${x.ar.split(' (')[0]}</button>`).join('')}</div>
+ <h2>${c.ar} <span class="en">${c.en}</span></h2>
+ <p class="sub">السؤال الذي تجيب عنه: <b>${c.q}</b></p>
+ <p>${simple?c.s:c.a}</p>
+ <div class="kw">${c.kw.map(k=>`<span>${k}</span>`).join('')}</div>
+ ${simple?`<div class="box an"><b>تشبيه يقرّب الفكرة</b>${c.an}</div>`:''}
+ <div class="box"><b>مثال</b>${c.ex}</div>
+ <div class="box" style="border-color:var(--bad)"><b>علاقتها بنظرية الاستعارة</b>${c.rel}</div>
+ <div class="row"><button class="btn ghost" ${ci==0?'disabled style="opacity:.4"':''} onclick="ci--;render()">المفهوم السابق</button>
+ ${ci<C.length-1?`<button class="btn" onclick="ci++;render()">المفهوم التالي</button>`:`<button class="btn" onclick="go(2)">إلى الخريطة</button>`}</div></div>`;
+}
+
+function v2(){
+ const s=S[si];
+ return `<div class="card"><h2>كيف ترتبط المفاهيم؟</h2>
+ <p>تخيّل أنك تقترب من هدفك خطوة خطوة. اضغط على كل درجة:</p>
+ ${S.map((x,i)=>`<button class="step${i==si?' on':''}" style="--i:${i}" onclick="si=${i};render()"><b>${x.n}</b><span>${x.r}</span></button>`).join('')}
+ <div class="box"><b>${s.n}</b>${s.d}</div></div>
+ <div class="card"><h2>ثلاث أفكار تصل كل شيء</h2>
+ <p>هذه الأفكار مشتركة بين اللسانيات المعرفية والدلالة المعرفية، وهي التي تقود إلى الاستعارة التصورية:</p>
+ <div class="chips">${P.map((x,i)=>`<button class="chip${i==pi?' on':''}" onclick="pi=${i};render()">${x.t}</button>`).join('')}</div>
+ ${pi>=0?`<div class="box an"><b>${P[pi].t}</b>${P[pi].d}</div>`:'<p class="sub">اختر فكرة لتعرف كيف تقود إلى الاستعارة.</p>'}
+ ${nav(1,3)}</div>`;
+}
+
+let selT=-1,done=new Set(),mm=[],bad=-1;
+function initM(){mm=sh(M.map((_,i)=>i));done=new Set();selT=-1;bad=-1}
+function pickT(i){if(done.has(i))return;selT=i;bad=-1;render()}
+function pickD(j){
+ if(selT<0||done.has(j))return;
+ if(j==selT){done.add(j);selT=-1;bad=-1}else{bad=j}
+ render();
+}
+function v3(){
+ if(!mm.length)initM();
+ const fin=done.size==M.length;
+ return `<div class="card"><h2>طابِق المفهوم بمعناه</h2>
+ <p>اضغط على المفهوم ثم على المعنى الذي يناسبه. عدد الصحيح: <b>${done.size}</b> من ${M.length}</p>
+ <div class="cols"><div>${M.map((m,i)=>`<button class="m${done.has(i)?' done':''}${selT==i?' sel':''}" style="width:100%" onclick="pickT(${i})">${m[0]}</button>`).join('')}</div>
+ <div>${mm.map(j=>`<button class="m${done.has(j)?' done':''}${bad==j?' no':''}" style="width:100%" onclick="pickD(${j})">${M[j][1]}</button>`).join('')}</div></div>
+ ${bad>=0?`<div class="fb bad">ليست هذه المطابقة. فكّر في السؤال الذي يجيب عنه كل مفهوم، ثم جرّب مرة أخرى.</div>`:''}
+ ${fin?`<div class="fb ok"><b>أحسنت!</b> طابقتَ كل المفاهيم. انتقل إلى الاختبار.</div>`:''}
+ <div class="row"><button class="btn ghost" onclick="initM();render()">إعادة التمرين</button>${fin?`<button class="btn" onclick="go(4)">إلى الاختبار</button>`:''}</div></div>`;
+}
+
+let qi=0,sc=0,ans=-1,opts=[],hint=false,fin=false;
+function initQ(){qi=0;sc=0;ans=-1;hint=false;fin=false;opts=[]}
+function choose(k){if(ans>=0)return;ans=k;if(opts[k].ok)sc++;render()}
+function nextQ(){hint=false;ans=-1;opts=[];if(qi<Q.length-1)qi++;else fin=true;render()}
+function v4(){
+ if(fin){
+  const m=sc>=5?'ممتاز! فهمتَ الأسس جيدًا.':sc>=3?'جيّد. أعد قراءة المفاهيم التي أخطأتَ فيها.':'لا بأس. ارجع إلى «المفاهيم» بالشرح المبسّط ثم أعد المحاولة.';
+  return `<div class="card"><h2>نتيجتك</h2><p class="score">${sc} / ${Q.length}</p><p style="text-align:center">${m}</p>
+  <div class="row"><button class="btn ghost" onclick="go(1)">مراجعة المفاهيم</button><button class="btn" onclick="initQ();render()">أعد الاختبار</button></div></div>`;
+ }
+ const q=Q[qi];
+ if(!opts.length)opts=sh(q.o.map((t,i)=>({t,ok:i==0})));
+ return `<div class="card"><p class="sub">السؤال ${qi+1} من ${Q.length}</p><h2>${q.q}</h2>
+ ${opts.map((o,k)=>`<button class="opt${ans>=0&&o.ok?' ok':''}${ans==k&&!o.ok?' bad':''}" onclick="choose(${k})">${o.t}</button>`).join('')}
+ ${ans<0?(hint?`<div class="box an"><b>تلميح</b>${q.h}</div>`:`<button class="btn ghost" onclick="hint=true;render()">أحتاج تلميحًا</button>`):
+ `<div class="fb ${opts[ans].ok?'ok':'bad'}"><b>${opts[ans].ok?'إجابة صحيحة!':'ليست هذه الإجابة.'}</b> ${q.e}</div>
+ <div class="row"><span></span><button class="btn" onclick="nextQ()">${qi<Q.length-1?'السؤال التالي':'عرض النتيجة'}</button></div>`}</div>`;
+}
+
+function render(){
+ $('#tabs').innerHTML=T.map((t,i)=>`<button class="tab${i==tab?' on':''}" onclick="go(${i})"${i==tab?' aria-current="page"':''}>${i+1}. ${t}</button>`).join('');
+ $('#bar').style.width=seen.size/T.length*100+'%';
+ $('#main').innerHTML=[v0,v1,v2,v3,v4][tab]();
+}
+render();
+</script>
+</body>
+</html>
